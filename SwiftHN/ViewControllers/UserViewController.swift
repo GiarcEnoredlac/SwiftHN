@@ -19,6 +19,11 @@ class UserViewController: NewsViewController {
         
         self.title = "HN:" + user
         self.navigationItem.rightBarButtonItem = nil
+        CBTracker.sharedTracker().authors = ["John Smith", "Jane Doe"];
+        CBTracker.sharedTracker().sections = ["news", "tech"];
+        CBTracker.sharedTracker().trackView(self.view,
+                                            viewId: "/article/date/brand-new-driverless-cars",
+                                            title: "Driverless cars will overpower humanity");
     }
     
     override func onPullToFresh() {

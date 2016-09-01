@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		009CBB831D78D0CA00F4D67E /* Chartbeat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 009CBB821D78D0CA00F4D67E /* Chartbeat.framework */; };
 		9F116DEB197804FD002D297E /* HackerSwifter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F116DE6197804EC002D297E /* HackerSwifter.framework */; };
 		9F116DEC197804FD002D297E /* HackerSwifter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F116DE6197804EC002D297E /* HackerSwifter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9F116DF219780643002D297E /* HackerSwifter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F116DE6197804EC002D297E /* HackerSwifter.framework */; };
@@ -263,6 +264,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		009CBB801D78CF7600F4D67E /* ChartbeatBridgeHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartbeatBridgeHeader.h; sourceTree = "<group>"; };
+		009CBB821D78D0CA00F4D67E /* Chartbeat.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chartbeat.framework; path = "../../../Desktop/sdk/Chartbeat-iOS-SDK-2016-08-22/Chartbeat.framework"; sourceTree = "<group>"; };
 		9F116DE0197804EC002D297E /* HackerSwifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HackerSwifter.xcodeproj; path = "SwiftHN/libs/submodules/Hacker Swifter/HackerSwifter.xcodeproj"; sourceTree = "<group>"; };
 		9F1AAFFA1941F13000E68F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F1AAFFB1941F13000E68F41 /* SwiftHNLiveViewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftHNLiveViewsTests.swift; sourceTree = "<group>"; };
@@ -339,6 +342,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				009CBB831D78D0CA00F4D67E /* Chartbeat.framework in Frameworks */,
 				9F116DEB197804FD002D297E /* HackerSwifter.framework in Frameworks */,
 				9F1EE92B194105C30061B4B6 /* SwiftHNShared.framework in Frameworks */,
 			);
@@ -374,6 +378,7 @@
 		4BF26A7604EA406E89BD9151 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				009CBB821D78D0CA00F4D67E /* Chartbeat.framework */,
 				F34153C464E446BB9A8AE8D8 /* libPods.a */,
 				9F6CA16D1945BB5A003A26D4 /* NotificationCenter.framework */,
 			);
@@ -487,6 +492,7 @@
 			children = (
 				9F21AA871940B5F300CF4E63 /* SwiftHN.entitlements */,
 				9F21AA681940A45700CF4E63 /* AppDelegate.swift */,
+				009CBB801D78CF7600F4D67E /* ChartbeatBridgeHeader.h */,
 				9F21AA6E1940A45700CF4E63 /* Main.storyboard */,
 				9F75D48E196F22F20061D908 /* Activities */,
 				9F773637196BF54700A6C5EC /* Views */,
@@ -1336,6 +1342,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = ChartbeatBridgeHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1359,6 +1366,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = ChartbeatBridgeHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

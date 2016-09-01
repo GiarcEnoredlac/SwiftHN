@@ -22,6 +22,11 @@ class DetailViewController: HNTableViewController, NewsCellDelegate {
         
         self.setupBarButtonItems()
         self.onPullToFresh()
+        CBTracker.sharedTracker().authors = ["John Smith", "Jane Doe"];
+        CBTracker.sharedTracker().sections = ["news", "tech"];
+        CBTracker.sharedTracker().trackView(self.view,
+                                            viewId: "/article/date/brand-new-driverless-cars",
+                                            title: "Driverless cars will overpower humanity");
     }
     
     func onPullToFresh() {

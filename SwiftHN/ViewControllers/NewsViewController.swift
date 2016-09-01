@@ -23,6 +23,11 @@ class NewsViewController: HNTableViewController, NewsCellDelegate, CategoriesVie
         
         self.setupInfiniteScrollingView()
         self.setupNavigationItems()
+        CBTracker.sharedTracker().authors = ["John Smith", "Jane Doe"];
+        CBTracker.sharedTracker().sections = ["news", "tech"];
+        CBTracker.sharedTracker().trackView(self.view,
+                                            viewId: "/article/date/brand-new-driverless-cars",
+                                            title: "Driverless cars will overpower humanity");
     }
     
     private func setupInfiniteScrollingView() {

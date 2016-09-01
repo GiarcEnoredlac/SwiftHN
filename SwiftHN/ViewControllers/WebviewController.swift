@@ -29,6 +29,11 @@ class WebviewController: UIViewController, UIWebViewDelegate {
                 self.webView.loadRequest(NSURLRequest(URL: realUrl))
             }
         }
+        CBTracker.sharedTracker().authors = ["John Smith", "Jane Doe"];
+        CBTracker.sharedTracker().sections = ["news", "tech"];
+        CBTracker.sharedTracker().trackView(self.view,
+                                            viewId: "/article/date/brand-new-driverless-cars",
+                                            title: "Driverless cars will overpower humanity");
     }
     
     func setupLoadingButton() {

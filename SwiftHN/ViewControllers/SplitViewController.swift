@@ -16,6 +16,11 @@ class SplitViewController: UISplitViewController, UISplitViewControllerDelegate 
         self.delegate = self
         self.preferredDisplayMode = UISplitViewControllerDisplayMode.AllVisible
         self.minimumPrimaryColumnWidth = 320.0
+        CBTracker.sharedTracker().authors = ["John Smith", "Jane Doe"];
+        CBTracker.sharedTracker().sections = ["news", "tech"];
+        CBTracker.sharedTracker().trackView(self.view,
+                                            viewId: "/article/date/brand-new-driverless-cars",
+                                            title: "Driverless cars will overpower humanity");
     }
     
     func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
